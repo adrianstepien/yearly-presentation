@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Podsumowanie roku 2026 — Podgląd prezentacji</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          colors: {
+            ink: '#1E293B',
+            muted: '#64748B',
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-[#F1F5F9] text-slate-800 font-sans antialiased selection:bg-sky-200/70 selection:text-slate-900 overflow-x-hidden">
+  <!-- Główny kontener aplikacji na pełną wysokość ekranu -->
+  <div id="app-root" class="h-screen w-screen flex flex-col justify-between overflow-hidden select-none">
+
+    <!-- Lekki górny pasek -->
+    <header class="w-full px-4 sm:px-6 py-2.5 flex items-center justify-between border-b border-slate-200/90 bg-white/85 backdrop-blur-md shrink-0 z-20">
+      <div class="flex items-center gap-3 min-w-0">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 shrink-0"></span>
+        <span class="font-display text-xs sm:text-sm font-semibold text-slate-800 truncate">
+          Podsumowanie roku 2026
+        </span>
+        <span class="hidden sm:inline-block text-xs font-medium text-slate-500 bg-slate-100 px-2.5 py-0.5 rounded-full">
+          Jasny motyw · 16:9
+        </span>
+      </div>
+
+      <!-- Przełącznik widoku -->
+      <div class="inline-flex items-center rounded-full bg-slate-100 p-1 border border-slate-200/80">
+        <button
+          id="btn-view-presentation-top"
+          type="button"
+          class="px-3.5 py-1.5 rounded-full text-xs font-medium transition-all flex items-center gap-1.5 cursor-pointer"
+          aria-label="Tryb prezentacji"
+        >
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="4" width="20" height="14" rx="2.5" />
+            <path d="M8 21h8M12 18v3" stroke-linecap="round" />
+          </svg>
+          <span class="hidden sm:inline">Prezentacja</span>
+        </button>
+        <button
+          id="btn-view-grid-top"
+          type="button"
+          class="px-3.5 py-1.5 rounded-full text-xs font-medium transition-all flex items-center gap-1.5 cursor-pointer"
+          aria-label="Podgląd wszystkich 3 slajdów"
+        >
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="4" width="7" height="7" rx="1.5" />
+            <rect x="14" y="4" width="7" height="7" rx="1.5" />
+            <rect x="3" y="14" width="7" height="7" rx="1.5" />
+            <rect x="14" y="14" width="7" height="7" rx="1.5" />
+          </svg>
+          <span>Wszystkie (3)</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- OBSZAR GŁÓWNY: Tryb pojedynczego slajdu 16:9 -->
+    <main
+      id="presentation-view"
+      class="flex-1 w-full relative flex items-center justify-center p-3 sm:p-6 md:p-8 overflow-hidden"
+    >
+      <!-- Ramka slajdu z miękkim cieniem -->
+      <div
+        id="slide-viewport"
+        class="relative overflow-hidden rounded-[24px] shadow-[0_20px_60px_-15px_rgba(15,23,42,0.12)] ring-1 ring-slate-200/90 bg-white transition-all duration-300"
+      >
+        <!-- Kontener o stałym wymiarze projektowym 1280x720 skalowany proporcjonalnie -->
+        <div
+          id="slide-scaler"
+          class="w-[1280px] h-[720px] origin-top-left relative bg-white"
+        >
+
+          <!-- ============================================================ -->
+          <!-- SLAJD 1: Tytułowy — Podsumowanie roku 2026                   -->
+          <!-- ============================================================ -->
+          <section
+            data-slide="0"
+            class="slide-panel absolute inset-0 w-[1280px] h-[720px] bg-white text-slate-800 px-16 py-14 flex items-center justify-between gap-12 overflow-hidden"
+          >
+            <!-- Delikatne, pastelowe plamy w tle -->
+            <div class="pointer-events-none absolute -top-28 -left-24 w-[440px] h-[440px] rounded-full bg-sky-100/70 blur-[90px]"></div>
+            <div class="pointer-events-none absolute -bottom-32 right-12 w-[520px] h-[520px] rounded-full bg-emerald-100/60 blur-[100px]"></div>
+            <div class="pointer-events-none absolute top-16 right-[36%] w-[300px] h-[300px] rounded-full bg-amber-100/45 blur-[80px]"></div>
+
+            <!-- Lewa strona: Lekka typografia + 3 pastelowe pigułki -->
+            <div class="relative z-10 w-[48%] flex flex-col justify-center">
+              <div class="inline-flex items-center gap-2 self-start px-3.5 py-1.5 rounded-full bg-sky-50 border border-sky-200/80 text-sky-700 text-xs font-semibold tracking-wide mb-6">
+                <span class="w-2 h-2 rounded-full bg-sky-400"></span>
+                Przegląd roczny zespołu
+              </div>
+
+              <h1 class="font-display text-[56px] font-extrabold tracking-tight text-slate-900 leading-[1.08]">
+                Podsumowanie<br />
+                <span class="text-sky-600">roku 2026</span>
+              </h1>
+
+              <p class="mt-5 text-[20px] leading-[1.6] text-slate-500 font-normal max-w-[500px]">
+                Najważniejsze zmiany i usprawnienia w pracy naszego zespołu
+              </p>
+
+              <!-- 3 minimalistyczne, lekkie pigułki/karty filarów roku -->
+              <div class="mt-9 flex flex-col gap-3 max-w-[460px]">
+                <!-- Filar 1 -->
+                <div class="flex items-center gap-3.5 px-4 py-3 rounded-2xl bg-sky-50/75 border border-sky-100">
+                  <div class="w-9 h-9 rounded-xl bg-white text-sky-600 shadow-xs flex items-center justify-center shrink-0">
+                    <svg class="w-4.5 h-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" stroke-linejoin="round" />
+                      <path d="m9 12 2 2 4-4" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <span class="text-[15px] font-semibold text-slate-700">
+                    Stabilność i monitoring
+                  </span>
+                </div>
+
+                <!-- Filar 2 -->
+                <div class="flex items-center gap-3.5 px-4 py-3 rounded-2xl bg-emerald-50/75 border border-emerald-100">
+                  <div class="w-9 h-9 rounded-xl bg-white text-emerald-600 shadow-xs flex items-center justify-center shrink-0">
+                    <svg class="w-4.5 h-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                      <path d="M9 11l3 3L22 4" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <span class="text-[15px] font-semibold text-slate-700">
+                    Porządek w danych i kodzie
+                  </span>
+                </div>
+
+                <!-- Filar 3 -->
+                <div class="flex items-center gap-3.5 px-4 py-3 rounded-2xl bg-amber-50/80 border border-amber-100">
+                  <div class="w-9 h-9 rounded-xl bg-white text-amber-600 shadow-xs flex items-center justify-center shrink-0">
+                    <svg class="w-4.5 h-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <span class="text-[15px] font-semibold text-slate-700">
+                    Szybkość i automatyzacja
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Prawa strona: Duża, optymistyczna ilustracja SVG zespołu świętującego sukces 2026 -->
+            <div class="relative z-10 w-[52%] flex items-center justify-center">
+              <svg
+                viewBox="0 0 580 500"
+                class="w-full h-auto max-w-[570px] block"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <!-- Miękkie pastelowe kształty tła pod ilustracją -->
+                <ellipse cx="305" cy="270" rx="235" ry="185" fill="#F0F9FF" />
+                <ellipse cx="345" cy="295" rx="185" ry="135" fill="#ECFDF5" opacity="0.85" />
+
+                <!-- Subtelny napis 2026 w tle -->
+                <text
+                  x="295"
+                  y="112"
+                  text-anchor="middle"
+                  fill="#E0F2FE"
+                  font-family="Plus Jakarta Sans, sans-serif"
+                  font-size="88"
+                  font-weight="800"
+                  letter-spacing="4"
+                >
+                  2026
+                </text>
+
+                <!-- Dekoracyjne konfetti / gwiazdki sukcesu -->
+                <g stroke="#1E293B" stroke-width="2" stroke-linecap="round">
+                  <!-- Złota gwiazda nad tablicą -->
+                  <path
+                    d="M465 72 L470 84 L483 85 L473 94 L476 107 L465 100 L454 107 L457 94 L447 85 L460 84 Z"
+                    fill="#FCD34D"
+                  />
+                  <!-- Małe pastelowe akcenty -->
+                  <circle cx="118" cy="118" r="6" fill="#A7F3D0" />
+                  <circle cx="516" cy="158" r="5" fill="#BAE6FD" />
+                  <circle cx="94" cy="235" r="4.5" fill="#FDE68A" />
+                  <path d="M156 82 L166 92 M166 82 L156 92" stroke="#38BDF8" stroke-width="2.5" />
+                  <path d="M506 218 L514 226 M514 218 L506 226" stroke="#34D399" stroke-width="2.5" />
+                </g>
+
+                <!-- Duży, przejrzysty dashboard na środku sceny -->
+                <g>
+                  <!-- Miękki cień pod tablicą -->
+                  <rect x="148" y="138" width="296" height="214" rx="22" fill="#CBD5E1" opacity="0.35" />
+                  <!-- Główna karta dashboardu -->
+                  <rect x="142" y="130" width="296" height="214" rx="22" fill="#FFFFFF" stroke="#1E293B" stroke-width="2.5" />
+
+                  <!-- Górny pasek okna dashboardu -->
+                  <line x1="142" y1="166" x2="438" y2="166" stroke="#E2E8F0" stroke-width="2" />
+                  <circle cx="164" cy="148" r="4.5" fill="#FDA4AF" />
+                  <circle cx="179" cy="148" r="4.5" fill="#FCD34D" />
+                  <circle cx="194" cy="148" r="4.5" fill="#6EE7B7" />
+                  <rect x="342" y="141" width="76" height="14" rx="7" fill="#ECFDF5" />
+                  <text x="380" y="151" text-anchor="middle" fill="#059669" font-family="Plus Jakarta Sans, sans-serif" font-size="9.5" font-weight="700">
+                    CELE 2026
+                  </text>
+
+                  <!-- Rosnący wykres słupkowy po lewej stronie dashboardu -->
+                  <rect x="164" y="184" width="136" height="138" rx="14" fill="#F8FAFC" />
+                  <line x1="178" y1="302" x2="286" y2="302" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round" />
+                  <!-- Słupki rosnące -->
+                  <rect x="184" y="274" width="18" height="28" rx="5" fill="#BAE6FD" stroke="#1E293B" stroke-width="1.8" />
+                  <rect x="210" y="254" width="18" height="48" rx="5" fill="#7DD3FC" stroke="#1E293B" stroke-width="1.8" />
+                  <rect x="236" y="228" width="18" height="74" rx="5" fill="#6EE7B7" stroke="#1E293B" stroke-width="1.8" />
+                  <rect x="262" y="202" width="18" height="100" rx="5" fill="#34D399" stroke="#1E293B" stroke-width="1.8" />
+                  <!-- Strzałka wzrostu nad słupkami -->
+                  <path d="M188 256 L220 232 L244 212 L272 192" stroke="#0EA5E9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M262 191 L273 191 L272 202" stroke="#0EA5E9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <!-- Lista odhaczonych celów po prawej stronie dashboardu -->
+                  <g>
+                    <!-- Wiersz 1 -->
+                    <rect x="312" y="186" width="106" height="36" rx="10" fill="#F0FDF4" />
+                    <circle cx="330" cy="204" r="9" fill="#34D399" stroke="#1E293B" stroke-width="1.8" />
+                    <path d="M326 204 L329 207 L335 201" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <rect x="346" y="198" width="58" height="5" rx="2.5" fill="#64748B" />
+                    <rect x="346" y="207" width="40" height="4" rx="2" fill="#94A3B8" />
+
+                    <!-- Wiersz 2 -->
+                    <rect x="312" y="232" width="106" height="36" rx="10" fill="#F0F9FF" />
+                    <circle cx="330" cy="250" r="9" fill="#38BDF8" stroke="#1E293B" stroke-width="1.8" />
+                    <path d="M326 250 L329 253 L335 247" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <rect x="346" y="244" width="54" height="5" rx="2.5" fill="#64748B" />
+                    <rect x="346" y="253" width="46" height="4" rx="2" fill="#94A3B8" />
+
+                    <!-- Wiersz 3 -->
+                    <rect x="312" y="278" width="106" height="36" rx="10" fill="#FFFBEB" />
+                    <circle cx="330" cy="296" r="9" fill="#FBBF24" stroke="#1E293B" stroke-width="1.8" />
+                    <path d="M326 296 L329 299 L335 293" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <rect x="346" y="290" width="60" height="5" rx="2.5" fill="#64748B" />
+                    <rect x="346" y="299" width="36" height="4" rx="2" fill="#94A3B8" />
+                  </g>
+                </g>
+
+                <!-- Linia podłoża -->
+                <line x1="62" y1="444" x2="528" y2="444" stroke="#CBD5E1" stroke-width="3" stroke-linecap="round" />
+
+                <!-- POSTAĆ 1 (Lewa strona): Członek zespołu wskazujący na dashboard z uśmiechem -->
+                <g>
+                  <!-- Nogi -->
+                  <path d="M106 376 L102 442" stroke="#1E293B" stroke-width="8" stroke-linecap="round" />
+                  <path d="M128 376 L134 442" stroke="#1E293B" stroke-width="8" stroke-linecap="round" />
+                  <!-- Buty -->
+                  <rect x="92" y="436" width="18" height="8" rx="4" fill="#38BDF8" stroke="#1E293B" stroke-width="2" />
+                  <rect x="128" y="436" width="18" height="8" rx="4" fill="#38BDF8" stroke="#1E293B" stroke-width="2" />
+                  <!-- Tułów (miętowa bluza) -->
+                  <rect x="92" y="298" width="50" height="82" rx="22" fill="#6EE7B7" stroke="#1E293B" stroke-width="2.5" />
+                  <!-- Lewa ręka na biodrze -->
+                  <path d="M94 316 Q74 338 92 356" stroke="#1E293B" stroke-width="6" stroke-linecap="round" fill="none" />
+                  <!-- Prawa ręka wskazująca na dashboard -->
+                  <path d="M140 316 Q168 302 184 282" stroke="#1E293B" stroke-width="6" stroke-linecap="round" fill="none" />
+                  <circle cx="186" cy="280" r="5.5" fill="#FDE68A" stroke="#1E293B" stroke-width="2" />
+                  <!-- Głowa -->
+                  <circle cx="117" cy="268" r="22" fill="#FDE68A" stroke="#1E293B" stroke-width="2.5" />
+                  <!-- Włosy -->
+                  <path d="M96 264 C96 244, 138 244, 138 264 C132 256, 104 256, 96 264 Z" fill="#1E293B" />
+                  <!-- Uśmiechnięta twarz -->
+                  <circle cx="112" cy="268" r="2" fill="#1E293B" />
+                  <circle cx="124" cy="268" r="2" fill="#1E293B" />
+                  <path d="M113 275 Q118 281 124 275" stroke="#1E293B" stroke-width="2" stroke-linecap="round" fill="none" />
+                </g>
+
+                <!-- POSTAĆ 2 (Prawa strona): Członek zespołu trzymający puchar sukcesu -->
+                <g>
+                  <!-- Nogi -->
+                  <path d="M446 376 L442 442" stroke="#1E293B" stroke-width="8" stroke-linecap="round" />
+                  <path d="M468 376 L474 442" stroke="#1E293B" stroke-width="8" stroke-linecap="round" />
+                  <!-- Buty -->
+                  <rect x="430" y="436" width="18" height="8" rx="4" fill="#FB7185" stroke="#1E293B" stroke-width="2" />
+                  <rect x="468" y="436" width="18" height="8" rx="4" fill="#FB7185" stroke="#1E293B" stroke-width="2" />
+                  <!-- Tułów (błękitny sweter) -->
+                  <rect x="432" y="298" width="50" height="82" rx="22" fill="#7DD3FC" stroke="#1E293B" stroke-width="2.5" />
+                  <!-- Prawa ręka w geście radości -->
+                  <path d="M480 316 Q504 296 498 272" stroke="#1E293B" stroke-width="6" stroke-linecap="round" fill="none" />
+                  <circle cx="498" cy="270" r="5.5" fill="#FED7AA" stroke="#1E293B" stroke-width="2" />
+                  <!-- Lewa ręka unosząca złoty puchar -->
+                  <path d="M434 316 Q412 298 416 276" stroke="#1E293B" stroke-width="6" stroke-linecap="round" fill="none" />
+                  <!-- Złoty puchar sukcesu -->
+                  <g transform="translate(396, 232)">
+                    <path d="M8 6 H32 L28 24 C27 30 13 30 12 24 Z" fill="#FBBF24" stroke="#1E293B" stroke-width="2.2" />
+                    <path d="M8 10 C2 10 2 20 9 20" stroke="#1E293B" stroke-width="2" fill="none" />
+                    <path d="M32 10 C38 10 38 20 31 20" stroke="#1E293B" stroke-width="2" fill="none" />
+                    <rect x="17" y="28" width="6" height="8" fill="#F59E0B" stroke="#1E293B" stroke-width="1.8" />
+                    <rect x="12" y="36" width="16" height="5" rx="2" fill="#1E293B" />
+                  </g>
+                  <!-- Głowa -->
+                  <circle cx="457" cy="268" r="22" fill="#FED7AA" stroke="#1E293B" stroke-width="2.5" />
+                  <!-- Fryzura (kok) -->
+                  <circle cx="468" cy="244" r="9" fill="#1E293B" />
+                  <path d="M436 266 C436 244, 478 244, 478 266 C470 256, 444 256, 436 266 Z" fill="#1E293B" />
+                  <!-- Uśmiechnięta twarz -->
+                  <circle cx="451" cy="268" r="2" fill="#1E293B" />
+                  <circle cx="463" cy="268" r="2" fill="#1E293B" />
+                  <path d="M452 275 Q457 281 463 275" stroke="#1E293B" stroke-width="2" stroke-linecap="round" fill="none" />
+                </g>
+
+                <!-- Mała roślinka biurowa po lewej na podłodze (lekki detal) -->
+                <g transform="translate(56, 396)">
+                  <path d="M8 28 H28 L25 48 H11 Z" fill="#FDA4AF" stroke="#1E293B" stroke-width="2" />
+                  <path d="M18 28 C18 14, 6 10, 6 18 C6 24, 14 26, 18 28 Z" fill="#34D399" stroke="#1E293B" stroke-width="1.8" />
+                  <path d="M18 24 C18 10, 30 8, 30 16 C30 22, 22 24, 18 24 Z" fill="#6EE7B7" stroke="#1E293B" stroke-width="1.8" />
+                </g>
+              </svg>
+            </div>
+          </section>
+
+          <!-- ============================================================ -->
+          <!-- SLAJD 2: Temat 1 — Logi i monitoring (JAK BYŁO)              -->
+          <!-- ============================================================ -->
+          <section
+            data-slide="1"
+            class="slide-panel absolute inset-0 w-[1280px] h-[720px] bg-white text-slate-800 px-16 py-12 flex flex-col justify-between overflow-hidden hidden"
+          >
+            <!-- Subtelna pastelowa poświata w tle -->
+            <div class="pointer-events-none absolute -top-24 right-0 w-[460px] h-[460px] rounded-full bg-rose-100/55 blur-[100px]"></div>
+            <div class="pointer-events-none absolute bottom-0 left-12 w-[360px] h-[300px] rounded-full bg-amber-100/45 blur-[90px]"></div>
+
+            <!-- Górny pasek slajdu: dyskretny znacznik + koralowa plakietka JAK BYŁO -->
+            <div class="relative z-10 flex items-center justify-between">
+              <span class="font-display text-sm font-semibold tracking-wide text-slate-400">
+                01 / Logi i monitoring
+              </span>
+              <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-50 border border-rose-200 text-rose-600 font-display text-xs font-bold tracking-wider uppercase">
+                <span class="w-2 h-2 rounded-full bg-rose-400"></span>
+                JAK BYŁO
+              </span>
+            </div>
+
+            <!-- Główna zawartość: Lewa kolumna (tekst) + Prawa kolumna (ilustracja zmęczonego ludzika) -->
+            <div class="relative z-10 flex-1 flex items-center justify-between gap-12 my-auto">
+              <!-- Lewa strona: Zwięzły tekst z dużą ilością powietrza -->
+              <div class="w-[46%] flex flex-col justify-center">
+                <h2 class="font-display text-[40px] font-bold tracking-tight text-slate-900 leading-[1.16]">
+                  Szum informacyjny zamiast diagnozy
+                </h2>
+
+                <div class="mt-9 flex flex-col gap-6">
+                  <!-- Punkt 1 -->
+                  <div class="flex items-start gap-4">
+                    <div class="w-11 h-11 rounded-2xl bg-amber-50 border border-amber-200/80 text-amber-600 flex items-center justify-center shrink-0 mt-0.5">
+                      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1">
+                        <path d="M4 6h16M4 10h16M4 14h10M4 18h14" stroke-linecap="round" />
+                      </svg>
+                    </div>
+                    <p class="text-[18px] leading-[1.55] text-slate-600">
+                      Ogromna liczba niespójnych wpisów zalewających system każdego dnia.
+                    </p>
+                  </div>
+
+                  <!-- Punkt 2 -->
+                  <div class="flex items-start gap-4">
+                    <div class="w-11 h-11 rounded-2xl bg-rose-50 border border-rose-200/80 text-rose-500 flex items-center justify-center shrink-0 mt-0.5">
+                      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1">
+                        <circle cx="11" cy="11" r="7" />
+                        <path d="m20 20-3.5-3.5" stroke-linecap="round" />
+                      </svg>
+                    </div>
+                    <p class="text-[18px] leading-[1.55] text-slate-600">
+                      Ręczne przekopywanie się przez tysiące linii tekstu przy każdym zgłoszeniu.
+                    </p>
+                  </div>
+
+                  <!-- Punkt 3 -->
+                  <div class="flex items-start gap-4">
+                    <div class="w-11 h-11 rounded-2xl bg-rose-50 border border-rose-200/80 text-rose-500 flex items-center justify-center shrink-0 mt-0.5">
+                      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1">
+                        <circle cx="12" cy="12" r="9" />
+                        <path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                    <p class="text-[18px] leading-[1.55] text-slate-600">
+                      Brak jasnego sygnału, co realnie powoduje problem — awarie wykrywane z opóźnieniem.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Prawa strona: Wektorowa ilustracja (SVG) zmęczonego ludzika przy monitorze zawalonym logami -->
+              <div class="w-[54%] flex items-center justify-center">
+                <svg
+                  viewBox="0 0 600 490"
+                  class="w-full h-auto max-w-[590px] block"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <!-- Pastelowe tło pod ilustracją -->
+                  <ellipse cx="315" cy="265" rx="245" ry="185" fill="#FFF1F2" opacity="0.7" />
+                  <ellipse cx="270" cy="295" rx="190" ry="130" fill="#FEF3C7" opacity="0.5" />
+
+                  <!-- Blat biurka -->
+                  <rect x="44" y="384" width="512" height="14" rx="7" fill="#E2E8F0" stroke="#1E293B" stroke-width="2.5" />
+                  <line x1="92" y1="398" x2="92" y2="462" stroke="#1E293B" stroke-width="4" stroke-linecap="round" />
+                  <line x1="508" y1="398" x2="508" y2="462" stroke="#1E293B" stroke-width="4" stroke-linecap="round" />
+
+                  <!-- MONITOR ZAWALONY LOGAMI (po prawej na biurku) -->
+                  <g>
+                    <!-- Podstawa monitora -->
+                    <path d="M372 332 L364 384 H416 L408 332 Z" fill="#CBD5E1" stroke="#1E293B" stroke-width="2.5" stroke-linejoin="round" />
+                    <rect x="346" y="376" width="88" height="8" rx="4" fill="#94A3B8" stroke="#1E293B" stroke-width="2" />
+
+                    <!-- Obudowa ekranu -->
+                    <rect x="256" y="136" width="268" height="198" rx="18" fill="#1E293B" />
+                    <!-- Wnętrze ekranu (jasny, ale gęsto zawalony logami) -->
+                    <rect x="268" y="148" width="244" height="168" rx="10" fill="#F8FAFC" />
+
+                    <!-- Pasek górny okna logów -->
+                    <rect x="268" y="148" width="244" height="22" rx="10" fill="#E2E8F0" />
+                    <circle cx="282" cy="159" r="3.5" fill="#FB7185" />
+                    <circle cx="294" cy="159" r="3.5" fill="#FBBF24" />
+                    <circle cx="306" cy="159" r="3.5" fill="#94A3B8" />
+                    <text x="322" y="162" fill="#475569" font-family="Inter, sans-serif" font-size="9" font-weight="600">
+                      system_logs_dump.txt (99 420 linii)
+                    </text>
+
+                    <!-- Gęste paski i linie tekstu symbolizujące ścianę logów -->
+                    <g opacity="0.85">
+                      <rect x="278" y="178" width="34" height="5" rx="2.5" fill="#94A3B8" />
+                      <rect x="318" y="178" width="142" height="5" rx="2.5" fill="#CBD5E1" />
+
+                      <rect x="278" y="190" width="38" height="5" rx="2.5" fill="#F59E0B" />
+                      <rect x="322" y="190" width="168" height="5" rx="2.5" fill="#FDE68A" />
+
+                      <rect x="278" y="202" width="34" height="5" rx="2.5" fill="#94A3B8" />
+                      <rect x="318" y="202" width="124" height="5" rx="2.5" fill="#CBD5E1" />
+
+                      <!-- Czerwony wiersz błędu -->
+                      <rect x="276" y="212" width="224" height="11" rx="3" fill="#FFE4E6" />
+                      <rect x="280" y="215" width="36" height="5" rx="2.5" fill="#F43F5E" />
+                      <rect x="322" y="215" width="156" height="5" rx="2.5" fill="#FDA4AF" />
+
+                      <rect x="278" y="230" width="34" height="5" rx="2.5" fill="#94A3B8" />
+                      <rect x="318" y="230" width="174" height="5" rx="2.5" fill="#CBD5E1" />
+
+                      <rect x="278" y="242" width="38" height="5" rx="2.5" fill="#F59E0B" />
+                      <rect x="322" y="242" width="138" height="5" rx="2.5" fill="#FDE68A" />
+
+                      <rect x="278" y="254" width="34" height="5" rx="2.5" fill="#94A3B8" />
+                      <rect x="318" y="254" width="160" height="5" rx="2.5" fill="#CBD5E1" />
+
+                      <!-- Drugi czerwony wiersz błędu -->
+                      <rect x="276" y="264" width="224" height="11" rx="3" fill="#FFE4E6" />
+                      <rect x="280" y="267" width="36" height="5" rx="2.5" fill="#F43F5E" />
+                      <rect x="322" y="267" width="144" height="5" rx="2.5" fill="#FDA4AF" />
+
+                      <rect x="278" y="282" width="34" height="5" rx="2.5" fill="#94A3B8" />
+                      <rect x="318" y="282" width="150" height="5" rx="2.5" fill="#CBD5E1" />
+
+                      <rect x="278" y="294" width="34" height="5" rx="2.5" fill="#94A3B8" />
+                      <rect x="318" y="294" width="118" height="5" rx="2.5" fill="#CBD5E1" />
+                    </g>
+
+                    <!-- Wyskakujące okienka z błędami i ostrzeżeniami wokół ekranu -->
+                    <!-- Okienko 1 (góra prawo) -->
+                    <g transform="translate(446, 94)">
+                      <rect x="0" y="0" width="112" height="46" rx="12" fill="#FFFFFF" stroke="#FB7185" stroke-width="2.2" />
+                      <circle cx="20" cy="23" r="10" fill="#FFE4E6" />
+                      <text x="20" y="27" text-anchor="middle" fill="#E11D48" font-family="Plus Jakarta Sans, sans-serif" font-size="13" font-weight="800">!</text>
+                      <rect x="36" y="15" width="60" height="6" rx="3" fill="#F43F5E" />
+                      <rect x="36" y="26" width="44" height="5" rx="2.5" fill="#FDA4AF" />
+                    </g>
+
+                    <!-- Okienko 2 (środek prawo, zachodzące na ramkę) -->
+                    <g transform="translate(464, 214)">
+                      <rect x="0" y="0" width="104" height="44" rx="12" fill="#FFFBEB" stroke="#F59E0B" stroke-width="2.2" />
+                      <path d="M18 14 L26 28 H10 Z" fill="#FBBF24" stroke="#1E293B" stroke-width="1.5" stroke-linejoin="round" />
+                      <rect x="34" y="15" width="54" height="6" rx="3" fill="#D97706" />
+                      <rect x="34" y="26" width="38" height="5" rx="2.5" fill="#FCD34D" />
+                    </g>
+
+                    <!-- Okienko 3 (góra środek) -->
+                    <g transform="translate(274, 86)">
+                      <rect x="0" y="0" width="96" height="38" rx="11" fill="#FFF1F2" stroke="#F43F5E" stroke-width="2" />
+                      <text x="48" y="23" text-anchor="middle" fill="#E11D48" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="700">
+                        ERROR × 142
+                      </text>
+                    </g>
+                  </g>
+
+                  <!-- KUBEK KAWY na biurku (po środku) -->
+                  <g transform="translate(216, 344)">
+                    <rect x="0" y="10" width="26" height="30" rx="6" fill="#FFFFFF" stroke="#1E293B" stroke-width="2.2" />
+                    <path d="M26 16 C33 16 33 28 26 28" stroke="#1E293B" stroke-width="2.2" fill="none" />
+                    <!-- Para znad kawy -->
+                    <path d="M8 5 Q6 0 9 -4" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round" fill="none" />
+                    <path d="M16 5 Q14 0 17 -4" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round" fill="none" />
+                  </g>
+
+                  <!-- ZMĘCZONY LUDZIK siedzący przy biurku (po lewej) -->
+                  <g>
+                    <!-- Krzesło biurowe -->
+                    <rect x="74" y="286" width="22" height="78" rx="11" fill="#CBD5E1" stroke="#1E293B" stroke-width="2.2" />
+                    <rect x="86" y="354" width="66" height="14" rx="7" fill="#94A3B8" stroke="#1E293B" stroke-width="2.2" />
+                    <line x1="118" y1="368" x2="118" y2="444" stroke="#1E293B" stroke-width="4" />
+                    <line x1="94" y1="444" x2="142" y2="444" stroke="#1E293B" stroke-width="4" stroke-linecap="round" />
+
+                    <!-- Tułów pochylony lekko do przodu (przygarbiony ze zmęczenia) -->
+                    <path
+                      d="M104 354 C102 314, 114 282, 144 282 C164 282, 174 306, 172 354 Z"
+                      fill="#93C5FD"
+                      stroke="#1E293B"
+                      stroke-width="2.5"
+                      stroke-linejoin="round"
+                    />
+
+                    <!-- Lewa ręka oparta łokciem o biurko, podpierająca głowę -->
+                    <path
+                      d="M148 308 L184 382 L166 274"
+                      stroke="#1E293B"
+                      stroke-width="7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                    <!-- Dłoń przy czole -->
+                    <circle cx="165" cy="268" r="7" fill="#FDE68A" stroke="#1E293B" stroke-width="2.2" />
+
+                    <!-- Prawa ręka bezwładnie na blacie -->
+                    <path
+                      d="M162 324 L204 380"
+                      stroke="#1E293B"
+                      stroke-width="6.5"
+                      stroke-linecap="round"
+                      fill="none"
+                    />
+
+                    <!-- Głowa lekko pochylona -->
+                    <g transform="translate(154, 248) rotate(10)">
+                      <circle cx="0" cy="0" r="24" fill="#FDE68A" stroke="#1E293B" stroke-width="2.5" />
+                      <!-- Rozczochrane włosy -->
+                      <path
+                        d="M-23 -4 C-22 -26, 22 -26, 23 -4 C16 -14, -14 -14, -23 -4 Z"
+                        fill="#1E293B"
+                      />
+                      <path d="M-6 -23 L-10 -31 M2 -24 L4 -32" stroke="#1E293B" stroke-width="2.2" stroke-linecap="round" />
+                      <!-- Zmęczone, przymknięte oczy -->
+                      <path d="M-4 -2 Q2 2 7 -2" stroke="#1E293B" stroke-width="2.2" stroke-linecap="round" fill="none" />
+                      <path d="M11 -2 Q16 2 20 -2" stroke="#1E293B" stroke-width="2.2" stroke-linecap="round" fill="none" />
+                      <!-- Westchnienie / lekko skrzywione usta -->
+                      <path d="M4 11 Q10 7 16 11" stroke="#1E293B" stroke-width="2" stroke-linecap="round" fill="none" />
+                    </g>
+
+                    <!-- Lekka chmurka przytłoczenia / kłębek myśli nad głową -->
+                    <g transform="translate(106, 152)">
+                      <path
+                        d="M24 44 H68 C78 44 85 37 85 28 C85 20 79 14 71 13 C68 4 58 -1 48 2 C41 -2 31 1 27 8 C17 9 10 17 10 27 C10 36 16 44 24 44 Z"
+                        fill="#FFF1F2"
+                        stroke="#FB7185"
+                        stroke-width="2"
+                      />
+                      <!-- Splątana spirala wewnątrz chmurki -->
+                      <path
+                        d="M32 24 C36 14, 52 14, 50 25 C48 33, 38 30, 42 21 C45 15, 62 17, 62 26"
+                        stroke="#F43F5E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        fill="none"
+                      />
+                      <!-- Małe bąbelki prowadzące od głowy do chmurki -->
+                      <circle cx="38" cy="54" r="4" fill="#FFE4E6" stroke="#FB7185" stroke-width="1.8" />
+                      <circle cx="44" cy="65" r="2.8" fill="#FFE4E6" stroke="#FB7185" stroke-width="1.5" />
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </section>
+
+          <!-- ============================================================ -->
+          <!-- SLAJD 3: Temat 1 — Logi i monitoring (JAK JEST)              -->
+          <!-- ============================================================ -->
+          <section
+            data-slide="2"
+            class="slide-panel absolute inset-0 w-[1280px] h-[720px] bg-white text-slate-800 px-16 py-12 flex flex-col justify-between overflow-hidden hidden"
+          >
+            <!-- Świeża miętowo-błękitna poświata w tle -->
+            <div class="pointer-events-none absolute -top-24 right-0 w-[480px] h-[480px] rounded-full bg-emerald-100/65 blur-[100px]"></div>
+            <div class="pointer-events-none absolute bottom-0 left-12 w-[380px] h-[300px] rounded-full bg-sky-100/55 blur-[90px]"></div>
+
+            <!-- Górny pasek slajdu: dyskretny znacznik + miętowo-zielona plakietka JAK JEST -->
+            <div class="relative z-10 flex items-center justify-between">
+              <span class="font-display text-sm font-semibold tracking-wide text-slate-400">
+                01 / Logi i monitoring
+              </span>
+              <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 font-display text-xs font-bold tracking-wider uppercase">
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                JAK JEST
+              </span>
+            </div>
+
+            <!-- Główna zawartość: Lewa kolumna (tekst) + Prawa kolumna (zrelaksowany bohater + przejrzysty ekran) -->
+            <div class="relative z-10 flex-1 flex items-center justify-between gap-12 my-auto">
+              <!-- Lewa strona: Zwięzły, optymistyczny tekst -->
+              <div class="w-[46%] flex flex-col justify-center">
+                <h2 class="font-display text-[40px] font-bold tracking-tight text-slate-900 leading-[1.16]">
+                  Szybkie wykrywanie awarii na podstawie logów
+                </h2>
+
+                <div class="mt-9 flex flex-col gap-6">
+                  <!-- Punkt 1 -->
+                  <div class="flex items-start gap-4">
+                    <div class="w-11 h-11 rounded-2xl bg-emerald-50 border border-emerald-200/80 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+                      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1">
+                        <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                    <p class="text-[18px] leading-[1.55] text-slate-600">
+                      Uporządkowane i ustrukturyzowane logi pozwalają natychmiast wyłapać nieprawidłowości.
+                    </p>
+                  </div>
+
+                  <!-- Punkt 2 -->
+                  <div class="flex items-start gap-4">
+                    <div class="w-11 h-11 rounded-2xl bg-sky-50 border border-sky-200/80 text-sky-600 flex items-center justify-center shrink-0 mt-0.5">
+                      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                      </svg>
+                    </div>
+                    <p class="text-[18px] leading-[1.55] text-slate-600">
+                      Automatyczne alerty wskazują konkretne źródło błędu zamiast zmuszać do szukania po omacku.
+                    </p>
+                  </div>
+
+                  <!-- Punkt 3 -->
+                  <div class="flex items-start gap-4">
+                    <div class="w-11 h-11 rounded-2xl bg-emerald-50 border border-emerald-200/80 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+                      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" stroke-linejoin="round" />
+                        <path d="m9 12 2 2 4-4" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                    <p class="text-[18px] leading-[1.55] text-slate-600">
+                      Krótszy czas reakcji zespołu i pełna kontrola nad stabilnością aplikacji.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Prawa strona: Wektorowa ilustracja (SVG) zrelaksowanego bohatera i czystego monitoringu -->
+              <div class="w-[54%] flex items-center justify-center">
+                <svg
+                  viewBox="0 0 600 490"
+                  class="w-full h-auto max-w-[590px] block"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <!-- Pastelowe tło pod ilustracją -->
+                  <ellipse cx="315" cy="265" rx="245" ry="185" fill="#ECFDF5" opacity="0.8" />
+                  <ellipse cx="275" cy="295" rx="190" ry="130" fill="#F0F9FF" opacity="0.7" />
+
+                  <!-- Blat biurka -->
+                  <rect x="44" y="384" width="512" height="14" rx="7" fill="#E2E8F0" stroke="#1E293B" stroke-width="2.5" />
+                  <line x1="92" y1="398" x2="92" y2="462" stroke="#1E293B" stroke-width="4" stroke-linecap="round" />
+                  <line x1="508" y1="398" x2="508" y2="462" stroke="#1E293B" stroke-width="4" stroke-linecap="round" />
+
+                  <!-- CZYSTY MONITOR Z PRZEJRZYSTYM MONITORINGIEM (po prawej na biurku) -->
+                  <g>
+                    <!-- Podstawa monitora -->
+                    <path d="M372 332 L364 384 H416 L408 332 Z" fill="#CBD5E1" stroke="#1E293B" stroke-width="2.5" stroke-linejoin="round" />
+                    <rect x="346" y="376" width="88" height="8" rx="4" fill="#94A3B8" stroke="#1E293B" stroke-width="2" />
+
+                    <!-- Obudowa ekranu -->
+                    <rect x="256" y="136" width="268" height="198" rx="18" fill="#1E293B" />
+                    <!-- Jasne wnętrze ekranu z dużą ilością oddechu -->
+                    <rect x="268" y="148" width="244" height="168" rx="10" fill="#FFFFFF" />
+
+                    <!-- Górny pasek z zielonym statusem zdrowia systemu -->
+                    <rect x="268" y="148" width="244" height="28" rx="10" fill="#F8FAFC" />
+                    <circle cx="284" cy="162" r="5" fill="#10B981" />
+                    <text x="295" y="165" fill="#065F46" font-family="Plus Jakarta Sans, sans-serif" font-size="10" font-weight="700">
+                      System: Stabilny
+                    </text>
+                    <rect x="434" y="154" width="66" height="16" rx="8" fill="#ECFDF5" />
+                    <text x="467" y="165" text-anchor="middle" fill="#059669" font-family="Plus Jakarta Sans, sans-serif" font-size="9" font-weight="700">
+                      AUTO-ALERT
+                    </text>
+
+                    <!-- Wykres ze spokojną linią i jednym wyraźnie wyizolowanym pikiem -->
+                    <rect x="280" y="186" width="220" height="72" rx="10" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5" />
+                    <!-- Linie odniesienia -->
+                    <line x1="292" y1="242" x2="488" y2="242" stroke="#E2E8F0" stroke-width="1.5" />
+                    <!-- Spokojna linia z jednym czystym pikiem -->
+                    <path
+                      d="M294 238 L322 237 L348 239 L374 237 L398 238 L412 198 L426 238 L454 237 L486 238"
+                      stroke="#10B981"
+                      stroke-width="2.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                    <!-- Podświetlony punkt anomalii -->
+                    <circle cx="412" cy="198" r="8" fill="#FFE4E6" />
+                    <circle cx="412" cy="198" r="4.5" fill="#F43F5E" stroke="#FFFFFF" stroke-width="1.5" />
+
+                    <!-- Jedna konkretna karta alertu na dole ekranu -->
+                    <rect x="280" y="266" width="220" height="38" rx="9" fill="#FFF1F2" stroke="#FDA4AF" stroke-width="1.5" />
+                    <circle cx="298" cy="285" r="8" fill="#F43F5E" />
+                    <text x="298" y="289" text-anchor="middle" fill="#FFFFFF" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="800">!</text>
+                    <text x="313" y="283" fill="#9F1239" font-family="Plus Jakarta Sans, sans-serif" font-size="9.5" font-weight="700">
+                      Wykryto anomalię — Moduł X
+                    </text>
+                    <text x="313" y="295" fill="#BE123C" font-family="Inter, sans-serif" font-size="8.5">
+                      Natychmiastowe powiadomienie zespołu
+                    </text>
+                  </g>
+
+                  <!-- Pozytywne karty statusu obok monitora -->
+                  <!-- Karta zielonego potwierdzenia (góra prawo) -->
+                  <g transform="translate(466, 92)">
+                    <rect x="0" y="0" width="96" height="42" rx="12" fill="#ECFDF5" stroke="#34D399" stroke-width="2.2" />
+                    <circle cx="22" cy="21" r="10" fill="#10B981" />
+                    <path d="M18 21 L21 24 L27 18" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                    <rect x="38" y="15" width="44" height="5" rx="2.5" fill="#059669" />
+                    <rect x="38" y="24" width="32" height="4.5" rx="2.25" fill="#6EE7B7" />
+                  </g>
+
+                  <!-- Mała zielona roślinka na biurku (symbol świeżości i porządku) -->
+                  <g transform="translate(216, 342)">
+                    <path d="M6 22 H24 L21 42 H9 Z" fill="#BAE6FD" stroke="#1E293B" stroke-width="2" />
+                    <path d="M15 22 C15 10, 4 7, 4 14 C4 19, 11 21, 15 22 Z" fill="#34D399" stroke="#1E293B" stroke-width="1.8" />
+                    <path d="M15 19 C15 7, 26 5, 26 12 C26 17, 19 19, 15 19 Z" fill="#6EE7B7" stroke="#1E293B" stroke-width="1.8" />
+                  </g>
+
+                  <!-- ZRELAKSOWANY, UŚMIECHNIĘTY BOHATER (po lewej przy biurku) -->
+                  <g>
+                    <!-- Krzesło biurowe -->
+                    <rect x="68" y="286" width="22" height="78" rx="11" fill="#CBD5E1" stroke="#1E293B" stroke-width="2.2" />
+                    <rect x="82" y="354" width="66" height="14" rx="7" fill="#94A3B8" stroke="#1E293B" stroke-width="2.2" />
+                    <line x1="114" y1="368" x2="114" y2="444" stroke="#1E293B" stroke-width="4" />
+                    <line x1="90" y1="444" x2="138" y2="444" stroke="#1E293B" stroke-width="4" stroke-linecap="round" />
+
+                    <!-- Wyprostowany, pewny siebie tułów (miętowa bluza) -->
+                    <rect
+                      x="96"
+                      y="282"
+                      width="56"
+                      height="84"
+                      rx="26"
+                      fill="#6EE7B7"
+                      stroke="#1E293B"
+                      stroke-width="2.5"
+                    />
+
+                    <!-- Lewa ręka swobodnie oparta -->
+                    <path
+                      d="M104 306 Q88 332 104 352"
+                      stroke="#1E293B"
+                      stroke-width="6.5"
+                      stroke-linecap="round"
+                      fill="none"
+                    />
+
+                    <!-- Prawa ręka z gestem "OK / kciuk w górę" skierowana w stronę ekranu -->
+                    <path
+                      d="M148 308 Q178 312 198 294"
+                      stroke="#1E293B"
+                      stroke-width="6.5"
+                      stroke-linecap="round"
+                      fill="none"
+                    />
+                    <!-- Dłoń z kciukiem w górę -->
+                    <g transform="translate(201, 290)">
+                      <circle cx="0" cy="2" r="6" fill="#FDE68A" stroke="#1E293B" stroke-width="2" />
+                      <path d="M0 -3 V-10" stroke="#1E293B" stroke-width="3" stroke-linecap="round" />
+                    </g>
+
+                    <!-- Wyprostowana głowa z szerokim uśmiechem -->
+                    <g transform="translate(126, 248)">
+                      <circle cx="0" cy="0" r="24" fill="#FDE68A" stroke="#1E293B" stroke-width="2.5" />
+                      <!-- Uporządkowane włosy -->
+                      <path
+                        d="M-23 -4 C-22 -26, 22 -26, 23 -4 C16 -14, -14 -14, -23 -4 Z"
+                        fill="#1E293B"
+                      />
+                      <!-- Pogodne oczy -->
+                      <circle cx="-4" cy="-2" r="2.2" fill="#1E293B" />
+                      <circle cx="10" cy="-2" r="2.2" fill="#1E293B" />
+                      <!-- Szeroki uśmiech -->
+                      <path d="M-2 7 Q4 14 11 7" stroke="#1E293B" stroke-width="2.2" stroke-linecap="round" fill="none" />
+                    </g>
+
+                    <!-- Subtelne iskierki spokoju i kontroli nad bohaterem -->
+                    <g stroke="#10B981" stroke-width="2.2" stroke-linecap="round">
+                      <path d="M126 196 V206 M121 201 H131" />
+                      <path d="M164 206 V213 M160.5 209.5 H167.5" stroke="#38BDF8" />
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- OBSZAR ALTERNATYWNY: Podgląd wszystkich 3 slajdów obok siebie -->
+    <section
+      id="grid-view"
+      class="hidden flex-1 w-full overflow-y-auto px-4 sm:px-8 py-6 sm:py-8"
+    >
+      <div class="max-w-[1600px] mx-auto">
+        <div class="mb-6 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+          <div>
+            <h2 class="font-display text-lg sm:text-xl font-bold text-slate-900">
+              Podgląd wszystkich 3 slajdów
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-500 mt-0.5">
+              Kliknij wybrany slajd, aby wrócić do pełnego widoku prezentacji.
+            </p>
+          </div>
+          <span class="text-xs font-medium text-slate-400">
+            Proporcje 16:9 · 1280 × 720
+          </span>
+        </div>
+
+        <!-- Siatka 3 miniatur 16:9 -->
+        <div
+          id="grid-container"
+          class="grid grid-cols-1 lg:grid-cols-3 gap-6"
+        ></div>
+      </div>
+    </section>
+
+    <!-- DOLNY PASEK NAWIGACJI -->
+    <footer class="w-full px-4 sm:px-6 py-3 border-t border-slate-200/90 bg-white/90 backdrop-blur-md shrink-0 z-20">
+      <div class="max-w-5xl mx-auto flex flex-wrap items-center justify-between gap-3">
+        <!-- Lewa strona: Poprzedni / Licznik / Następny -->
+        <div class="flex items-center gap-2">
+          <button
+            id="btn-prev"
+            type="button"
+            class="px-3.5 py-2 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 text-xs sm:text-sm font-medium flex items-center gap-1.5 shadow-2xs transition-all disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+            aria-label="Poprzedni slajd"
+          >
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="m15 18-6-6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="hidden sm:inline">Poprzedni</span>
+          </button>
+
+          <div
+            id="slide-counter"
+            class="px-3.5 py-2 rounded-xl bg-slate-100 border border-slate-200/80 font-display text-xs sm:text-sm font-bold text-slate-800 min-w-[68px] text-center"
+          >
+            1 / 3
+          </div>
+
+          <button
+            id="btn-next"
+            type="button"
+            class="px-3.5 py-2 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 text-xs sm:text-sm font-medium flex items-center gap-1.5 shadow-2xs transition-all disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+            aria-label="Następny slajd"
+          >
+            <span class="hidden sm:inline">Następny</span>
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="m9 18 6-6-6-6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Środek: Bezpośredni wybór slajdu -->
+        <div class="flex items-center gap-1.5" role="tablist" aria-label="Wybór slajdu">
+          <button
+            type="button"
+            data-jump="0"
+            class="jump-btn px-3.5 py-2 rounded-xl text-xs font-medium border transition-all cursor-pointer"
+          >
+            1 · Podsumowanie
+          </button>
+          <button
+            type="button"
+            data-jump="1"
+            class="jump-btn px-3.5 py-2 rounded-xl text-xs font-medium border transition-all cursor-pointer"
+          >
+            2 · Jak było
+          </button>
+          <button
+            type="button"
+            data-jump="2"
+            class="jump-btn px-3.5 py-2 rounded-xl text-xs font-medium border transition-all cursor-pointer"
+          >
+            3 · Jak jest
+          </button>
+        </div>
+
+        <!-- Prawa strona: Wszystkie (3) + Pełny ekran -->
+        <div class="flex items-center gap-2">
+          <button
+            id="btn-toggle-view"
+            type="button"
+            class="px-3.5 py-2 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 text-xs font-medium flex items-center gap-1.5 shadow-2xs transition-all cursor-pointer"
+            title="Przełącz widok: Prezentacja / Wszystkie (3)"
+          >
+            <svg class="w-4 h-4 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="7" height="7" rx="1.5" />
+              <rect x="14" y="4" width="7" height="7" rx="1.5" />
+              <rect x="3" y="14" width="7" height="7" rx="1.5" />
+              <rect x="14" y="14" width="7" height="7" rx="1.5" />
+            </svg>
+            <span id="toggle-view-label">Wszystkie (3)</span>
+          </button>
+
+          <button
+            id="btn-fullscreen"
+            type="button"
+            class="px-3.5 py-2 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 text-xs font-medium flex items-center gap-1.5 shadow-2xs transition-all cursor-pointer"
+            title="Pełny ekran"
+            aria-label="Pełny ekran"
+          >
+            <svg id="icon-fs-enter" class="w-4 h-4 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <svg id="icon-fs-exit" class="w-4 h-4 text-slate-500 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="hidden md:inline">Pełny ekran</span>
+          </button>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Nieinwazyjny komunikat statusowy (bez użycia alert()) -->
+    <div
+      id="toast-message"
+      class="pointer-events-none fixed top-16 left-1/2 -translate-x-1/2 px-4 py-2 rounded-full bg-slate-900 text-white text-xs font-medium shadow-lg opacity-0 transition-opacity duration-200 z-50"
+    ></div>
+  </div>
+
+  <!-- Logika prezentacji, skalowania 16:9, nawigacji i podglądu siatki -->
+  <script>
+    (function () {
+      'use strict';
+
+      const SLIDE_WIDTH = 1280;
+      const SLIDE_HEIGHT = 720;
+
+      const SLIDE_META = [
+        {
+          number: '01',
+          title: 'Podsumowanie roku 2026',
+          tag: 'START',
+          tagClass: 'text-sky-700 bg-sky-50 border-sky-200',
+        },
+        {
+          number: '02',
+          title: 'Logi i monitoring',
+          tag: 'JAK BYŁO',
+          tagClass: 'text-rose-600 bg-rose-50 border-rose-200',
+        },
+        {
+          number: '03',
+          title: 'Logi i monitoring',
+          tag: 'JAK JEST',
+          tagClass: 'text-emerald-700 bg-emerald-50 border-emerald-200',
+        },
+      ];
+
+      let currentSlide = 0;
+      let viewMode = 'presentation'; // 'presentation' | 'grid'
+      let toastTimer = null;
+
+      const appRoot = document.getElementById('app-root');
+      const presentationView = document.getElementById('presentation-view');
+      const gridView = document.getElementById('grid-view');
+      const gridContainer = document.getElementById('grid-container');
+      const slideViewport = document.getElementById('slide-viewport');
+      const slideScaler = document.getElementById('slide-scaler');
+      const slidePanels = Array.from(document.querySelectorAll('.slide-panel'));
+      const totalSlides = slidePanels.length;
+
+      const btnPrev = document.getElementById('btn-prev');
+      const btnNext = document.getElementById('btn-next');
+      const slideCounter = document.getElementById('slide-counter');
+      const jumpButtons = Array.from(document.querySelectorAll('.jump-btn'));
+      const btnToggleView = document.getElementById('btn-toggle-view');
+      const toggleViewLabel = document.getElementById('toggle-view-label');
+      const btnViewPresTop = document.getElementById('btn-view-presentation-top');
+      const btnViewGridTop = document.getElementById('btn-view-grid-top');
+      const btnFullscreen = document.getElementById('btn-fullscreen');
+      const iconFsEnter = document.getElementById('icon-fs-enter');
+      const iconFsExit = document.getElementById('icon-fs-exit');
+      const toastEl = document.getElementById('toast-message');
+
+      function showToast(message) {
+        if (!toastEl) return;
+        toastEl.textContent = message;
+        toastEl.classList.remove('opacity-0');
+        toastEl.classList.add('opacity-100');
+        if (toastTimer) clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => {
+          toastEl.classList.remove('opacity-100');
+          toastEl.classList.add('opacity-0');
+        }, 2500);
+      }
+
+      /**
+       * Proporcjonalnie skaluje aktywny slajd 1280x720 do dostępnej przestrzeni okna.
+       */
+      function scaleActiveSlide() {
+        if (viewMode !== 'presentation') return;
+
+        const rect = presentationView.getBoundingClientRect();
+        const style = window.getComputedStyle(presentationView);
+        const padX = parseFloat(style.paddingLeft) + parseFloat(style.paddingRight);
+        const padY = parseFloat(style.paddingTop) + parseFloat(style.paddingBottom);
+
+        const availW = Math.max(240, rect.width - padX);
+        const availH = Math.max(135, rect.height - padY);
+
+        const scale = Math.min(availW / SLIDE_WIDTH, availH / SLIDE_HEIGHT);
+        slideViewport.style.width = Math.floor(SLIDE_WIDTH * scale) + 'px';
+        slideViewport.style.height = Math.floor(SLIDE_HEIGHT * scale) + 'px';
+        slideScaler.style.transform = `scale(${scale})`;
+      }
+
+      /**
+       * Skaluje miniatury 16:9 w widoku siatki wszystkich 3 slajdów.
+       */
+      function scaleGridSlides() {
+        if (viewMode !== 'grid') return;
+        const slots = gridContainer.querySelectorAll('.grid-slide-slot');
+        slots.forEach((slot) => {
+          const scaler = slot.querySelector('.grid-slide-scaler');
+          if (!scaler) return;
+          const width = slot.clientWidth;
+          if (width <= 0) return;
+          const scale = width / SLIDE_WIDTH;
+          slot.style.height = Math.round(SLIDE_HEIGHT * scale) + 'px';
+          scaler.style.transform = `scale(${scale})`;
+        });
+      }
+
+      /**
+       * Tworzy karty podglądu wszystkich 3 slajdów obok siebie.
+       */
+      function buildGridOverview() {
+        gridContainer.innerHTML = '';
+
+        slidePanels.forEach((panel, index) => {
+          const meta = SLIDE_META[index];
+
+          const card = document.createElement('button');
+          card.type = 'button';
+          card.dataset.gridIndex = String(index);
+          card.className =
+            'grid-slide-card group text-left rounded-2xl bg-white border border-slate-200 hover:border-sky-400 p-3 shadow-xs transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md cursor-pointer focus:outline-none focus:ring-2 focus:ring-sky-400';
+
+          const slot = document.createElement('div');
+          slot.className =
+            'grid-slide-slot relative w-full overflow-hidden rounded-xl bg-white ring-1 ring-slate-200/90 group-hover:ring-sky-300';
+
+          const scaler = document.createElement('div');
+          scaler.className = 'grid-slide-scaler w-[1280px] h-[720px] origin-top-left pointer-events-none';
+
+          const clone = panel.cloneNode(true);
+          clone.classList.remove('hidden');
+
+          scaler.appendChild(clone);
+          slot.appendChild(scaler);
+
+          const caption = document.createElement('div');
+          caption.className = 'mt-3 px-1 flex items-center justify-between gap-2';
+          caption.innerHTML = `
+            <div class="flex items-center gap-2 min-w-0">
+              <span class="font-display text-xs font-bold text-slate-400">${meta.number}</span>
+              <span class="text-sm font-semibold text-slate-700 truncate">${meta.title}</span>
+            </div>
+            <span class="font-display text-[10px] font-bold tracking-wider px-2.5 py-0.5 rounded-full border shrink-0 ${meta.tagClass}">
+              ${meta.tag}
+            </span>
+          `;
+
+          card.appendChild(slot);
+          card.appendChild(caption);
+
+          card.addEventListener('click', () => {
+            goToSlide(index);
+            setViewMode('presentation');
+          });
+
+          gridContainer.appendChild(card);
+        });
+      }
+
+      function goToSlide(index) {
+        const clamped = Math.max(0, Math.min(totalSlides - 1, index));
+        currentSlide = clamped;
+
+        slidePanels.forEach((panel, idx) => {
+          panel.classList.toggle('hidden', idx !== currentSlide);
+        });
+
+        slideCounter.textContent = `${currentSlide + 1} / ${totalSlides}`;
+        btnPrev.disabled = currentSlide === 0;
+        btnNext.disabled = currentSlide === totalSlides - 1;
+
+        jumpButtons.forEach((btn, idx) => {
+          const isActive = idx === currentSlide;
+          btn.className = isActive
+            ? 'jump-btn px-3.5 py-2 rounded-xl text-xs font-semibold border transition-all cursor-pointer bg-sky-50 border-sky-300 text-sky-700'
+            : 'jump-btn px-3.5 py-2 rounded-xl text-xs font-medium border transition-all cursor-pointer bg-white border-slate-200 text-slate-500 hover:text-slate-800 hover:bg-slate-50';
+          btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
+
+        gridContainer.querySelectorAll('.grid-slide-card').forEach((card, idx) => {
+          card.classList.toggle('ring-2', idx === currentSlide);
+          card.classList.toggle('ring-sky-400', idx === currentSlide);
+        });
+      }
+
+      function setViewMode(mode) {
+        viewMode = mode;
+        const isGrid = mode === 'grid';
+
+        presentationView.classList.toggle('hidden', isGrid);
+        gridView.classList.toggle('hidden', !isGrid);
+
+        const activeTopCls = 'bg-white text-slate-900 shadow-2xs font-semibold';
+        const inactiveTopCls = 'text-slate-500 hover:text-slate-800';
+
+        btnViewPresTop.className = `px-3.5 py-1.5 rounded-full text-xs transition-all flex items-center gap-1.5 cursor-pointer ${
+          !isGrid ? activeTopCls : inactiveTopCls
+        }`;
+        btnViewGridTop.className = `px-3.5 py-1.5 rounded-full text-xs transition-all flex items-center gap-1.5 cursor-pointer ${
+          isGrid ? activeTopCls : inactiveTopCls
+        }`;
+
+        toggleViewLabel.textContent = isGrid ? 'Tryb prezentacji' : 'Wszystkie (3)';
+
+        requestAnimationFrame(() => {
+          if (isGrid) {
+            scaleGridSlides();
+          } else {
+            scaleActiveSlide();
+          }
+        });
+      }
+
+      async function toggleFullscreen() {
+        try {
+          if (!document.fullscreenElement) {
+            if (appRoot.requestFullscreen) {
+              await appRoot.requestFullscreen();
+            } else {
+              showToast('Tryb pełnoekranowy nie jest wspierany w tej przeglądarce.');
+            }
+          } else if (document.exitFullscreen) {
+            await document.exitFullscreen();
+          }
+        } catch (err) {
+          showToast('Tryb pełnoekranowy został zablokowany przez ustawienia okna podglądu.');
+        }
+      }
+
+      function syncFullscreenIcons() {
+        const isFs = Boolean(document.fullscreenElement);
+        iconFsEnter.classList.toggle('hidden', isFs);
+        iconFsExit.classList.toggle('hidden', !isFs);
+        setTimeout(() => {
+          scaleActiveSlide();
+          scaleGridSlides();
+        }, 60);
+      }
+
+      btnPrev.addEventListener('click', () => {
+        if (viewMode === 'grid') setViewMode('presentation');
+        goToSlide(currentSlide - 1);
+      });
+
+      btnNext.addEventListener('click', () => {
+        if (viewMode === 'grid') setViewMode('presentation');
+        goToSlide(currentSlide + 1);
+      });
+
+      jumpButtons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const target = parseInt(btn.dataset.jump, 10);
+          goToSlide(target);
+          if (viewMode === 'grid') setViewMode('presentation');
+        });
+      });
+
+      btnToggleView.addEventListener('click', () => {
+        setViewMode(viewMode === 'presentation' ? 'grid' : 'presentation');
+      });
+
+      btnViewPresTop.addEventListener('click', () => setViewMode('presentation'));
+      btnViewGridTop.addEventListener('click', () => setViewMode('grid'));
+      btnFullscreen.addEventListener('click', toggleFullscreen);
+      document.addEventListener('fullscreenchange', syncFullscreenIcons);
+
+      document.addEventListener('keydown', (e) => {
+        if (e.target && ['INPUT', 'TEXTAREA'].includes(e.target.tagName)) return;
+
+        if (e.key === 'ArrowRight' || e.key === 'PageDown') {
+          e.preventDefault();
+          if (viewMode === 'grid') setViewMode('presentation');
+          goToSlide(currentSlide + 1);
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+          e.preventDefault();
+          if (viewMode === 'grid') setViewMode('presentation');
+          goToSlide(currentSlide - 1);
+        } else if (e.key === 'Home') {
+          e.preventDefault();
+          goToSlide(0);
+        } else if (e.key === 'End') {
+          e.preventDefault();
+          goToSlide(totalSlides - 1);
+        } else if (e.key === 'g' || e.key === 'G') {
+          setViewMode(viewMode === 'presentation' ? 'grid' : 'presentation');
+        }
+      });
+
+      let touchStartX = 0;
+      let touchStartY = 0;
+
+      presentationView.addEventListener(
+        'touchstart',
+        (e) => {
+          if (!e.touches || e.touches.length !== 1) return;
+          touchStartX = e.touches[0].clientX;
+          touchStartY = e.touches[0].clientY;
+        },
+        { passive: true }
+      );
+
+      presentationView.addEventListener(
+        'touchend',
+        (e) => {
+          if (!e.changedTouches || e.changedTouches.length !== 1) return;
+          const dx = e.changedTouches[0].clientX - touchStartX;
+          const dy = e.changedTouches[0].clientY - touchStartY;
+          if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.4) {
+            if (dx < 0) goToSlide(currentSlide + 1);
+            else goToSlide(currentSlide - 1);
+          }
+        },
+        { passive: true }
+      );
+
+      if (typeof ResizeObserver !== 'undefined') {
+        const ro = new ResizeObserver(() => {
+          scaleActiveSlide();
+          scaleGridSlides();
+        });
+        ro.observe(presentationView);
+        ro.observe(gridContainer);
+      }
+      window.addEventListener('resize', () => {
+        scaleActiveSlide();
+        scaleGridSlides();
+      });
+
+      buildGridOverview();
+      goToSlide(0);
+      setViewMode('presentation');
+      window.addEventListener('load', () => {
+        scaleActiveSlide();
+        scaleGridSlides();
+      });
+    })();
+  </script>
+</body>
+</html>
